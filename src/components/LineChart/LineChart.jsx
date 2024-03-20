@@ -1,4 +1,4 @@
-import { LineChart as LChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart as LChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 
 
 
@@ -16,29 +16,30 @@ const LineChart = () => {
         { "student_id": 9, "math_mark": 83, "physics_mark": 80, "chemistry_mark": 85 },
         { "student_id": 10, "math_mark": 79, "physics_mark": 75, "chemistry_mark": 72 }
     ];
-    
-    
+
+
     return (
-        <div className='w-full h-full'>
 
-            <LChart width={500} height={300} data={studentMarks}>
+        <div>
+           
 
-                <Line dataKey={"math_mark"} stroke="green" />
-                <Line dataKey={"physics_mark"}  />
-                <Line dataKey={"chemistry_mark"} stroke="red" />
-              
+                <LChart width={500} height={300} data={studentMarks}>
 
-                <XAxis dataKey="student_id" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <CartesianGrid strokeDasharray="3 3" />
-
-            </LChart>
+                    <Line dataKey={"math_mark"} stroke="green" />
+                    <Line dataKey={"physics_mark"} />
+                    <Line dataKey={"chemistry_mark"} stroke="red" />
 
 
-            
-            </div>
+                    <XAxis dataKey="student_id" />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    <CartesianGrid strokeDasharray="3 3" />
+
+                </LChart>
+
+
+        </div>
     );
 };
 
